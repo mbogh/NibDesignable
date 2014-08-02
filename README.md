@@ -1,5 +1,13 @@
-NibDesignable
+Nib Designable
 =============
+
+## Installation
+
+Simply drop `NibDesignable.swift` into your project and it is ready to use.
+
+## Usage
+
+
 
 ## Thanks
 
