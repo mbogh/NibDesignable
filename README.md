@@ -30,7 +30,7 @@ Simply drop `NibDesignable.swift` into your project and it is ready to use.
 3. Create a nib, place a `UIView` and change the class to `CustomView`
 4. Design your view and add `@IBInspectable` properties.
 
-**NB** Access to outlets must be done through `self.proxyView" and for now I recommend that you implement this in your subclass.
+**NB** Access to outlets must be done through `self.proxyView` and for now I recommend that you implement this in your subclass. This is to avoid unwrapping the optional property `proxyView` and casting everytime you want to access an outlet.
 ``` swift
 private func proxyView() -> CustomView {
   return self.proxyView! as CustomView
