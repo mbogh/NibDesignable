@@ -20,3 +20,9 @@ Follow me on Twitter ([@mbogh](https://twitter.com/mbogh)) and/or visit my blog 
 ## License
 
 Nib Designable is released under an MIT license. See LICENSE for more information.
+
+## Release Notes
+
+Version 1.0
+
+- Initial release
