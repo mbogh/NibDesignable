@@ -57,4 +57,16 @@ class ProfileAvatarView: NibDesignable {
     private func proxyView() -> ProfileAvatarView {
         return self.proxyView! as ProfileAvatarView
     }
+
+    // MARK: Interface Builder
+    override func prepareForInterfaceBuilder() {
+        if countElements(self.name) == 0 {
+            self.name = "John Appleseed"
+        }
+
+        if self.profileImage.size == CGSizeZero {
+            let bundle = NSBundle(forClass: self.dynamicType)
+            self.profileImage = UIImage(named: "Donkey", inBundle: bundle, compatibleWithTraitCollection: nil)
+        }
+    }
 }
