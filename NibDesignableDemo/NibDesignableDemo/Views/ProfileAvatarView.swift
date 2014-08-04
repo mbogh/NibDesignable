@@ -24,7 +24,7 @@
 
 import UIKit
 
-class ProfileAvatarView: NibDesignable {
+public class ProfileAvatarView: NibDesignable {
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
 
@@ -50,7 +50,7 @@ class ProfileAvatarView: NibDesignable {
     }
 
     // MARK: NibDesignable
-    override func nibName() -> String {
+    override public func nibName() -> String {
         return "ProfileAvatarView"
     }
 
@@ -59,7 +59,7 @@ class ProfileAvatarView: NibDesignable {
     }
 
     // MARK: Interface Builder
-    override func prepareForInterfaceBuilder() {
+    override public func prepareForInterfaceBuilder() {
         if countElements(self.name) == 0 {
             self.name = "John Appleseed"
         }

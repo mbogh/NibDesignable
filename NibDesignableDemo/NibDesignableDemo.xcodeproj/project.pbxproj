@@ -11,26 +11,10 @@
 		5AD66C43198C06A70006A638 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD66C42198C06A70006A638 /* ViewController.swift */; };
 		5AD66C46198C06A70006A638 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AD66C44198C06A70006A638 /* Main.storyboard */; };
 		5AD66C48198C06A70006A638 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AD66C47198C06A70006A638 /* Images.xcassets */; };
-		5AD66C54198C06A70006A638 /* NibDesignableDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD66C53198C06A70006A638 /* NibDesignableDemoTests.swift */; };
 		5AD66C5E198C06D10006A638 /* NibDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD66C5D198C06D10006A638 /* NibDesignable.swift */; };
+		5AD66C66198CC0080006A638 /* ProfileAvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD66C65198CC0080006A638 /* ProfileAvatarView.swift */; };
+		5AD66C68198CC0740006A638 /* ProfileAvatarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AD66C67198CC0740006A638 /* ProfileAvatarView.xib */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		5AD66C4E198C06A70006A638 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5AD66C33198C06A70006A638 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5AD66C3A198C06A70006A638;
-			remoteInfo = NibDesignableDemo;
-		};
-		5AD66C5F198C06D90006A638 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5AD66C33198C06A70006A638 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5AD66C3A198C06A70006A638;
-			remoteInfo = NibDesignableDemo;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		5AD66C3B198C06A70006A638 /* NibDesignableDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NibDesignableDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -39,21 +23,13 @@
 		5AD66C42198C06A70006A638 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5AD66C45198C06A70006A638 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5AD66C47198C06A70006A638 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		5AD66C4D198C06A70006A638 /* NibDesignableDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NibDesignableDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5AD66C52198C06A70006A638 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5AD66C53198C06A70006A638 /* NibDesignableDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibDesignableDemoTests.swift; sourceTree = "<group>"; };
 		5AD66C5D198C06D10006A638 /* NibDesignable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NibDesignable.swift; path = ../../NibDesignable.swift; sourceTree = "<group>"; };
+		5AD66C65198CC0080006A638 /* ProfileAvatarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileAvatarView.swift; sourceTree = "<group>"; };
+		5AD66C67198CC0740006A638 /* ProfileAvatarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileAvatarView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		5AD66C38198C06A70006A638 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5AD66C4A198C06A70006A638 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -67,7 +43,6 @@
 			isa = PBXGroup;
 			children = (
 				5AD66C3D198C06A70006A638 /* NibDesignableDemo */,
-				5AD66C50198C06A70006A638 /* NibDesignableDemoTests */,
 				5AD66C3C198C06A70006A638 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -76,7 +51,6 @@
 			isa = PBXGroup;
 			children = (
 				5AD66C3B198C06A70006A638 /* NibDesignableDemo.app */,
-				5AD66C4D198C06A70006A638 /* NibDesignableDemoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -84,10 +58,11 @@
 		5AD66C3D198C06A70006A638 /* NibDesignableDemo */ = {
 			isa = PBXGroup;
 			children = (
+				5AD66C64198C07100006A638 /* NibDesignable */,
+				5AD66C63198C07080006A638 /* Views */,
 				5AD66C40198C06A70006A638 /* AppDelegate.swift */,
 				5AD66C42198C06A70006A638 /* ViewController.swift */,
 				5AD66C44198C06A70006A638 /* Main.storyboard */,
-				5AD66C5D198C06D10006A638 /* NibDesignable.swift */,
 				5AD66C47198C06A70006A638 /* Images.xcassets */,
 				5AD66C3E198C06A70006A638 /* Supporting Files */,
 			);
@@ -102,21 +77,21 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		5AD66C50198C06A70006A638 /* NibDesignableDemoTests */ = {
+		5AD66C63198C07080006A638 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				5AD66C53198C06A70006A638 /* NibDesignableDemoTests.swift */,
-				5AD66C51198C06A70006A638 /* Supporting Files */,
+				5AD66C65198CC0080006A638 /* ProfileAvatarView.swift */,
+				5AD66C67198CC0740006A638 /* ProfileAvatarView.xib */,
 			);
-			path = NibDesignableDemoTests;
+			path = Views;
 			sourceTree = "<group>";
 		};
-		5AD66C51198C06A70006A638 /* Supporting Files */ = {
+		5AD66C64198C07100006A638 /* NibDesignable */ = {
 			isa = PBXGroup;
 			children = (
-				5AD66C52198C06A70006A638 /* Info.plist */,
+				5AD66C5D198C06D10006A638 /* NibDesignable.swift */,
 			);
-			name = "Supporting Files";
+			name = NibDesignable;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,25 +114,6 @@
 			productReference = 5AD66C3B198C06A70006A638 /* NibDesignableDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		5AD66C4C198C06A70006A638 /* NibDesignableDemoTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 5AD66C5A198C06A70006A638 /* Build configuration list for PBXNativeTarget "NibDesignableDemoTests" */;
-			buildPhases = (
-				5AD66C49198C06A70006A638 /* Sources */,
-				5AD66C4A198C06A70006A638 /* Frameworks */,
-				5AD66C4B198C06A70006A638 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				5AD66C4F198C06A70006A638 /* PBXTargetDependency */,
-				5AD66C60198C06D90006A638 /* PBXTargetDependency */,
-			);
-			name = NibDesignableDemoTests;
-			productName = NibDesignableDemoTests;
-			productReference = 5AD66C4D198C06A70006A638 /* NibDesignableDemoTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -169,10 +125,6 @@
 				TargetAttributes = {
 					5AD66C3A198C06A70006A638 = {
 						CreatedOnToolsVersion = 6.0;
-					};
-					5AD66C4C198C06A70006A638 = {
-						CreatedOnToolsVersion = 6.0;
-						TestTargetID = 5AD66C3A198C06A70006A638;
 					};
 				};
 			};
@@ -190,7 +142,6 @@
 			projectRoot = "";
 			targets = (
 				5AD66C3A198C06A70006A638 /* NibDesignableDemo */,
-				5AD66C4C198C06A70006A638 /* NibDesignableDemoTests */,
 			);
 		};
 /* End PBXProject section */
@@ -200,15 +151,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AD66C68198CC0740006A638 /* ProfileAvatarView.xib in Resources */,
 				5AD66C46198C06A70006A638 /* Main.storyboard in Resources */,
 				5AD66C48198C06A70006A638 /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5AD66C4B198C06A70006A638 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,33 +165,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				5AD66C43198C06A70006A638 /* ViewController.swift in Sources */,
+				5AD66C66198CC0080006A638 /* ProfileAvatarView.swift in Sources */,
 				5AD66C5E198C06D10006A638 /* NibDesignable.swift in Sources */,
 				5AD66C41198C06A70006A638 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5AD66C49198C06A70006A638 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5AD66C54198C06A70006A638 /* NibDesignableDemoTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		5AD66C4F198C06A70006A638 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 5AD66C3A198C06A70006A638 /* NibDesignableDemo */;
-			targetProxy = 5AD66C4E198C06A70006A638 /* PBXContainerItemProxy */;
-		};
-		5AD66C60198C06D90006A638 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 5AD66C3A198C06A70006A638 /* NibDesignableDemo */;
-			targetProxy = 5AD66C5F198C06D90006A638 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		5AD66C44198C06A70006A638 /* Main.storyboard */ = {
@@ -361,40 +286,6 @@
 			};
 			name = Release;
 		};
-		5AD66C5B198C06A70006A638 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NibDesignableDemo.app/NibDesignableDemo";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = NibDesignableDemoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-			};
-			name = Debug;
-		};
-		5AD66C5C198C06A70006A638 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NibDesignableDemo.app/NibDesignableDemo";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = NibDesignableDemoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -412,14 +303,6 @@
 			buildConfigurations = (
 				5AD66C58198C06A70006A638 /* Debug */,
 				5AD66C59198C06A70006A638 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
-		5AD66C5A198C06A70006A638 /* Build configuration list for PBXNativeTarget "NibDesignableDemoTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				5AD66C5B198C06A70006A638 /* Debug */,
-				5AD66C5C198C06A70006A638 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

@@ -29,17 +29,17 @@ public class NibDesignable: UIView {
     public weak var proxyView: NibDesignable?
 
     // MARK: - Initializer
-    init(frame: CGRect) {
+    override init(frame: CGRect) {
         super.init(frame: frame)
         var view = self.loadNib()
         view.frame = self.bounds
         view.autoresizingMask = .FlexibleWidth | .FlexibleHeight
         self.proxyView = view
-        self.addSubview(self.proxyView)
+        self.addSubview(self.proxyView!)
     }
 
     // MARK: - NSCoding
-    init(coder aDecoder: NSCoder!) {
+    required public init(coder aDecoder: NSCoder!) {
         super.init(coder: aDecoder)
     }
 
