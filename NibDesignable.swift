@@ -25,47 +25,39 @@ import UIKit
 
 @IBDesignable
 public class NibDesignable: UIView {
-    /// View instantiated from the nib. All actions and outlets are/should be connected to this.
-    public weak var proxyView: NibDesignable?
 
     // MARK: - Initializer
     override init(frame: CGRect) {
         super.init(frame: frame)
-        var view = self.loadNib()
-        view.frame = self.bounds
-        view.autoresizingMask = .FlexibleWidth | .FlexibleHeight
-        self.proxyView = view
-        self.addSubview(self.proxyView!)
+        self.setupNib()
     }
 
     // MARK: - NSCoding
     required public init(coder aDecoder: NSCoder!) {
         super.init(coder: aDecoder)
-    }
-
-    override public func awakeAfterUsingCoder(aDecoder: NSCoder!) -> AnyObject! {
-        if self.subviews.count == 0 {
-            var view = self.loadNib()
-            view.setTranslatesAutoresizingMaskIntoConstraints(false)
-            let contraints = self.constraints()
-            self.removeConstraints(contraints)
-            view.addConstraints(contraints)
-            view.proxyView = view
-            return view
-        }
-        return self
+        self.setupNib()
     }
 
     // MARK: - Nib loading
 
     /**
-        Called to load the nib in init(frame:) and awakeAfterUsingCoder(aDecoder:).
-
-        :returns: NibDesignable instance loaded from a nib file.
+        Called in init(frame:) and init(aDecoder:) to load the nib and add it as a subview.
     */
-    public func loadNib() -> NibDesignable {
+    private func setupNib() {
+        var view = self.loadNib()
+        view.frame = self.bounds
+        view.autoresizingMask = .FlexibleWidth | .FlexibleHeight
+        self.addSubview(view)
+    }
+
+    /**
+        Called to load the nib in setupNib().
+
+        :returns: UIView instance loaded from a nib file.
+    */
+    public func loadNib() -> UIView {
         let bundle = NSBundle(forClass: self.dynamicType)
-        return bundle.loadNibNamed(self.nibName(), owner: nil, options: nil)[0] as NibDesignable
+        return bundle.loadNibNamed(self.nibName(), owner: self, options: nil)[0] as UIView
     }
 
     /**

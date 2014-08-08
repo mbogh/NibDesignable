@@ -30,7 +30,7 @@ public class ProfileAvatarView: NibDesignable {
 
     @IBInspectable public var name: String = "" {
         didSet {
-            self.proxyView().nameLabel.text = name
+            self.nameLabel.text = name
         }
     }
 
@@ -45,17 +45,13 @@ public class ProfileAvatarView: NibDesignable {
 
             let image = UIGraphicsGetImageFromCurrentImageContext()
             UIGraphicsEndImageContext()
-            self.proxyView().profileImageView.image = image
+            self.profileImageView.image = image
         }
     }
 
     // MARK: NibDesignable
     override public func nibName() -> String {
         return "ProfileAvatarView"
-    }
-
-    private func proxyView() -> ProfileAvatarView {
-        return self.proxyView! as ProfileAvatarView
     }
 
     // MARK: Interface Builder

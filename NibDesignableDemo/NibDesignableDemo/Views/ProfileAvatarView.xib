@@ -4,9 +4,14 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6198"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileAvatarView" customModule="NibDesignableDemo" customModuleProvider="target">
+            <connections>
+                <outlet property="nameLabel" destination="xRc-ae-gPh" id="8BA-Fc-uKe"/>
+                <outlet property="profileImageView" destination="PCT-rM-bLJ" id="OJA-sS-UTt"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ProfileAvatarView" customModule="NibDesignableDemo" customModuleProvider="target">
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
@@ -32,10 +37,6 @@
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <connections>
-                <outlet property="nameLabel" destination="xRc-ae-gPh" id="If3-Sl-22K"/>
-                <outlet property="profileImageView" destination="PCT-rM-bLJ" id="gAE-78-Iq9"/>
-            </connections>
             <point key="canvasLocation" x="80" y="122"/>
         </view>
     </objects>
