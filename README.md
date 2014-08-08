@@ -13,7 +13,7 @@ Simply drop `NibDesignable.swift` into your project and it is ready to use.
   
   }
   ```
-2. Create a nib, place a `UIView` and change the `File's owner` to `CustomView`
+2. Create a nib, place a `UIView` and change the `File's Owner` to `CustomView`
 3. Design your view and add `@IBInspectable` properties.
 
 ## Thanks
