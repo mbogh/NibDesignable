@@ -49,11 +49,6 @@ public class ProfileAvatarView: NibDesignable {
         }
     }
 
-    // MARK: NibDesignable
-    override public func nibName() -> String {
-        return "ProfileAvatarView"
-    }
-
     // MARK: Interface Builder
     override public func prepareForInterfaceBuilder() {
         if countElements(self.name) == 0 {

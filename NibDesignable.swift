@@ -61,11 +61,11 @@ public class NibDesignable: UIView {
     }
 
     /**
-        Called in the default implementation of loadNib()
+        Called in the default implementation of loadNib(). Default is class name.
 
         :returns: Name of a single view nib file.
     */
     public func nibName() -> String {
-        return ""
+        return self.dynamicType.description().componentsSeparatedByString(".").last!
     }
 }
