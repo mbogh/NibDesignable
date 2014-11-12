@@ -57,7 +57,7 @@ public class ProfileAvatarView: NibDesignable {
 
         if self.profileImage.size == CGSizeZero {
             let bundle = NSBundle(forClass: self.dynamicType)
-            self.profileImage = UIImage(named: "Donkey", inBundle: bundle, compatibleWithTraitCollection: nil)
+            self.profileImage = UIImage(named: "Donkey", inBundle: bundle, compatibleWithTraitCollection: nil)!
         }
     }
 }
