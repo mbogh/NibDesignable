@@ -45,9 +45,11 @@ public class NibDesignable: UIView {
     */
     private func setupNib() {
         var view = self.loadNib()
-        view.frame = self.bounds
-        view.autoresizingMask = .FlexibleWidth | .FlexibleHeight
         self.addSubview(view)
+        view.setTranslatesAutoresizingMaskIntoConstraints(false)
+        let bindings = ["view": view]
+        self.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|[view]|", options:NSLayoutFormatOptions(0), metrics:nil, views: bindings))
+        self.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|[view]|", options:NSLayoutFormatOptions(0), metrics:nil, views: bindings))
     }
 
     /**
