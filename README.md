@@ -45,6 +45,10 @@ Nib Designable is released under an MIT license. See LICENSE for more informatio
 
 ## Release Notes
 
+Version 1.0.3
+
+- Switched to Auto Layout in `setupNib()`. This fixes issues when views have size of `{0,0}` initially.
+
 Version 1.0.2
 
 - CocoaPods support
