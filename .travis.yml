@@ -1,5 +1,5 @@
 osx_image: xcode611
 language: objective-c
 script:
-  - xctool -project NibDesignableDemo/NibDesignableDemo.xcodeproj -scheme NibDesignableDemo
+  - xctool -project NibDesignableDemo/NibDesignableDemo.xcodeproj -scheme NibDesignableDemo -sdk iphonesimulator
   - xctool -project NibDesignableDemo/NibDesignableDemo.xcodeproj test -scheme NibDesignableDemo -sdk iphonesimulator
