@@ -2,7 +2,7 @@
 //  NibDesignableDemoTests.swift
 //  NibDesignableDemoTests
 //
-//  Copyright (c) 2014 Morten Bøgh
+//  Copyright (c) 2015 Morten Bøgh
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -38,5 +38,22 @@ class NibDesignableDemoTests: XCTestCase {
     func testNibNameMatchingClassName() {
         let view = ProfileAvatarView(frame: CGRect())
         XCTAssertEqual("ProfileAvatarView", view.nibName(), "nibName should return the class name when not overridden")
+    }
+
+    func testNibNameMatchingNibName() {
+        let view = TestView(frame: CGRect())
+        XCTAssertEqual("TestingView", view.nibName(), "nibName should return the nib name when overridden")
+    }
+
+    func testNibViewFrameShouldMatchViewFrame() {
+        let view = TestView(frame: CGRect())
+        view.setNeedsUpdateConstraints()
+        view.layoutIfNeeded()
+        XCTAssertEqual(view.bounds, view.subviews.first!.frame, "View bounds should match that of the view from the Nib")
+
+        view.frame = CGRect(x: 20, y: 18, width: 200, height: 100)
+        view.setNeedsUpdateConstraints()
+        view.layoutIfNeeded()
+        XCTAssertEqual(view.bounds, view.subviews.first!.frame, "View bounds should match that of the view from the Nib")
     }
 }
