@@ -27,7 +27,7 @@ import UIKit
 public class NibDesignable: UIView {
 
     // MARK: - Initializer
-    override init(frame: CGRect) {
+    override public init(frame: CGRect) {
         super.init(frame: frame)
         self.setupNib()
     }

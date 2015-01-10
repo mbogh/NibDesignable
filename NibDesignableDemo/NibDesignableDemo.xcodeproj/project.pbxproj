@@ -14,7 +14,18 @@
 		5AD66C5E198C06D10006A638 /* NibDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD66C5D198C06D10006A638 /* NibDesignable.swift */; };
 		5AD66C66198CC0080006A638 /* ProfileAvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD66C65198CC0080006A638 /* ProfileAvatarView.swift */; };
 		5AD66C68198CC0740006A638 /* ProfileAvatarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AD66C67198CC0740006A638 /* ProfileAvatarView.xib */; };
+		5AD7CA3E1A6152F5002E66A8 /* NibDesignableDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD7CA3D1A6152F5002E66A8 /* NibDesignableDemoTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5AD7CA3F1A6152F5002E66A8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5AD66C33198C06A70006A638 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5AD66C3A198C06A70006A638;
+			remoteInfo = NibDesignableDemo;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		5AD66C3B198C06A70006A638 /* NibDesignableDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NibDesignableDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -26,10 +37,20 @@
 		5AD66C5D198C06D10006A638 /* NibDesignable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NibDesignable.swift; path = ../../NibDesignable.swift; sourceTree = "<group>"; };
 		5AD66C65198CC0080006A638 /* ProfileAvatarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileAvatarView.swift; sourceTree = "<group>"; };
 		5AD66C67198CC0740006A638 /* ProfileAvatarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileAvatarView.xib; sourceTree = "<group>"; };
+		5AD7CA391A6152F5002E66A8 /* NibDesignableDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NibDesignableDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5AD7CA3C1A6152F5002E66A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5AD7CA3D1A6152F5002E66A8 /* NibDesignableDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibDesignableDemoTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		5AD66C38198C06A70006A638 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5AD7CA361A6152F5002E66A8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -43,6 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				5AD66C3D198C06A70006A638 /* NibDesignableDemo */,
+				5AD7CA3A1A6152F5002E66A8 /* NibDesignableDemoTests */,
 				5AD66C3C198C06A70006A638 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -51,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				5AD66C3B198C06A70006A638 /* NibDesignableDemo.app */,
+				5AD7CA391A6152F5002E66A8 /* NibDesignableDemoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -94,6 +117,23 @@
 			name = NibDesignable;
 			sourceTree = "<group>";
 		};
+		5AD7CA3A1A6152F5002E66A8 /* NibDesignableDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				5AD7CA3D1A6152F5002E66A8 /* NibDesignableDemoTests.swift */,
+				5AD7CA3B1A6152F5002E66A8 /* Supporting Files */,
+			);
+			path = NibDesignableDemoTests;
+			sourceTree = "<group>";
+		};
+		5AD7CA3B1A6152F5002E66A8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5AD7CA3C1A6152F5002E66A8 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -114,6 +154,24 @@
 			productReference = 5AD66C3B198C06A70006A638 /* NibDesignableDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
+		5AD7CA381A6152F5002E66A8 /* NibDesignableDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5AD7CA431A6152F5002E66A8 /* Build configuration list for PBXNativeTarget "NibDesignableDemoTests" */;
+			buildPhases = (
+				5AD7CA351A6152F5002E66A8 /* Sources */,
+				5AD7CA361A6152F5002E66A8 /* Frameworks */,
+				5AD7CA371A6152F5002E66A8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5AD7CA401A6152F5002E66A8 /* PBXTargetDependency */,
+			);
+			name = NibDesignableDemoTests;
+			productName = NibDesignableDemoTests;
+			productReference = 5AD7CA391A6152F5002E66A8 /* NibDesignableDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -125,6 +183,10 @@
 				TargetAttributes = {
 					5AD66C3A198C06A70006A638 = {
 						CreatedOnToolsVersion = 6.0;
+					};
+					5AD7CA381A6152F5002E66A8 = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = 5AD66C3A198C06A70006A638;
 					};
 				};
 			};
@@ -142,6 +204,7 @@
 			projectRoot = "";
 			targets = (
 				5AD66C3A198C06A70006A638 /* NibDesignableDemo */,
+				5AD7CA381A6152F5002E66A8 /* NibDesignableDemoTests */,
 			);
 		};
 /* End PBXProject section */
@@ -154,6 +217,13 @@
 				5AD66C68198CC0740006A638 /* ProfileAvatarView.xib in Resources */,
 				5AD66C46198C06A70006A638 /* Main.storyboard in Resources */,
 				5AD66C48198C06A70006A638 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5AD7CA371A6152F5002E66A8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,7 +241,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5AD7CA351A6152F5002E66A8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5AD7CA3E1A6152F5002E66A8 /* NibDesignableDemoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5AD7CA401A6152F5002E66A8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5AD66C3A198C06A70006A638 /* NibDesignableDemo */;
+			targetProxy = 5AD7CA3F1A6152F5002E66A8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		5AD66C44198C06A70006A638 /* Main.storyboard */ = {
@@ -286,6 +372,42 @@
 			};
 			name = Release;
 		};
+		5AD7CA411A6152F5002E66A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = NibDesignableDemoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NibDesignableDemo.app/NibDesignableDemo";
+			};
+			name = Debug;
+		};
+		5AD7CA421A6152F5002E66A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = NibDesignableDemoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NibDesignableDemo.app/NibDesignableDemo";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -303,6 +425,15 @@
 			buildConfigurations = (
 				5AD66C58198C06A70006A638 /* Debug */,
 				5AD66C59198C06A70006A638 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5AD7CA431A6152F5002E66A8 /* Build configuration list for PBXNativeTarget "NibDesignableDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5AD7CA411A6152F5002E66A8 /* Debug */,
+				5AD7CA421A6152F5002E66A8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
