@@ -15,6 +15,8 @@
 		5AD66C66198CC0080006A638 /* ProfileAvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD66C65198CC0080006A638 /* ProfileAvatarView.swift */; };
 		5AD66C68198CC0740006A638 /* ProfileAvatarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AD66C67198CC0740006A638 /* ProfileAvatarView.xib */; };
 		5AD7CA3E1A6152F5002E66A8 /* NibDesignableDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD7CA3D1A6152F5002E66A8 /* NibDesignableDemoTests.swift */; };
+		5AD7CA451A615D44002E66A8 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD7CA441A615D44002E66A8 /* TestView.swift */; };
+		5AD7CA471A615D9D002E66A8 /* TestingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AD7CA461A615D9D002E66A8 /* TestingView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,8 @@
 		5AD7CA391A6152F5002E66A8 /* NibDesignableDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NibDesignableDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AD7CA3C1A6152F5002E66A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5AD7CA3D1A6152F5002E66A8 /* NibDesignableDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibDesignableDemoTests.swift; sourceTree = "<group>"; };
+		5AD7CA441A615D44002E66A8 /* TestView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		5AD7CA461A615D9D002E66A8 /* TestingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestingView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +125,8 @@
 			isa = PBXGroup;
 			children = (
 				5AD7CA3D1A6152F5002E66A8 /* NibDesignableDemoTests.swift */,
+				5AD7CA441A615D44002E66A8 /* TestView.swift */,
+				5AD7CA461A615D9D002E66A8 /* TestingView.xib */,
 				5AD7CA3B1A6152F5002E66A8 /* Supporting Files */,
 			);
 			path = NibDesignableDemoTests;
@@ -224,6 +230,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AD7CA471A615D9D002E66A8 /* TestingView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,6 +252,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AD7CA451A615D44002E66A8 /* TestView.swift in Sources */,
 				5AD7CA3E1A6152F5002E66A8 /* NibDesignableDemoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
