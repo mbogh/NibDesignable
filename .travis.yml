@@ -1,0 +1,6 @@
+osx_image: xcode611
+language: objective-c
+xcode_project: NibDesignableDemo/NibDesignableDemo.xcodeproj
+script:
+  - xctool -scheme NibDesignableDemo
+  - xctool test -scheme NibDesignableDemo -sdk iphonesimulator
