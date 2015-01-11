@@ -45,6 +45,11 @@ class NibDesignableDemoTests: XCTestCase {
         XCTAssertEqual("TestingView", view.nibName(), "nibName should return the nib name when overridden")
     }
 
+    func testNibNameNotMatchingClassName() {
+        let view = TestView(frame: CGRect())
+        XCTAssertNotEqual("TestView", view.nibName(), "nibName should return the nib name when overridden")
+    }
+
     func testNibViewFrameShouldMatchViewFrame() {
         let view = TestView(frame: CGRect())
         view.setNeedsUpdateConstraints()
@@ -55,5 +60,10 @@ class NibDesignableDemoTests: XCTestCase {
         view.setNeedsUpdateConstraints()
         view.layoutIfNeeded()
         XCTAssertEqual(view.bounds, view.subviews.first!.frame, "View bounds should match that of the view from the Nib")
+    }
+
+    func testViewHasExactlyASingleSubviewAfterInit() {
+        let view = TestView(frame: CGRect())
+        XCTAssertEqual(view.subviews.count, 1, "View should have exactly 1 subview after init.")
     }
 }
