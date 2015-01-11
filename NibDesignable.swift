@@ -44,7 +44,7 @@ public class NibDesignable: UIView {
         Called in init(frame:) and init(aDecoder:) to load the nib and add it as a subview.
     */
     private func setupNib() {
-        var view = self.loadNib()
+        let view = self.loadNib()
         self.addSubview(view)
         view.setTranslatesAutoresizingMaskIntoConstraints(false)
         let bindings = ["view": view]
