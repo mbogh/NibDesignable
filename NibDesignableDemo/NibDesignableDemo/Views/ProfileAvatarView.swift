@@ -51,7 +51,7 @@ public class ProfileAvatarView: NibDesignable {
 
     // MARK: Interface Builder
     override public func prepareForInterfaceBuilder() {
-        if countElements(self.name) == 0 {
+        if count(self.name) == 0 {
             self.name = "John Appleseed"
         }
 
