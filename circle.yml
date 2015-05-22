@@ -9,6 +9,7 @@ test:
         -scheme "NibDesignableDemo"
         -sdk iphonesimulator
         -destination 'platform=iOS Simulator,OS=8.1,name=iPhone 6'
+        -project NibDesignableDemo/NibDesignableDemo.xcodeproj
         -configuration Debug
         CODE_SIGNING_REQUIRED=NO
         CODE_SIGN_IDENTITY=
