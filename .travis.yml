@@ -1,4 +1,4 @@
-osx_image: beta-xcode6.2
+osx_image: beta-xcode6.3
 language: objective-c
 script:
   - xctool -project NibDesignableDemo/NibDesignableDemo.xcodeproj -scheme NibDesignableDemo -sdk iphonesimulator
