@@ -23,6 +23,31 @@
 
 import UIKit
 
+extension UIView {
+
+    // MARK: - Nib loading
+
+    /**
+    Called to load the nib in setupNib().
+    
+    :returns: UIView instance loaded from a nib file.
+    */
+    public func loadNib() -> UIView {
+        let bundle = NSBundle(forClass: self.dynamicType)
+        let nib = UINib(nibName: self.nibName(), bundle: bundle)
+        return nib.instantiateWithOwner(self, options: nil)[0] as! UIView
+    }
+    
+    /**
+    Called in the default implementation of loadNib(). Default is class name.
+    
+    :returns: Name of a single view nib file.
+    */
+    public func nibName() -> String {
+        return self.dynamicType.description().componentsSeparatedByString(".").last!
+    }
+}
+
 @IBDesignable
 public class NibDesignable: UIView {
 
@@ -51,24 +76,34 @@ public class NibDesignable: UIView {
         self.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|[view]|", options:NSLayoutFormatOptions(0), metrics:nil, views: bindings))
         self.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|[view]|", options:NSLayoutFormatOptions(0), metrics:nil, views: bindings))
     }
+}
 
-    /**
-        Called to load the nib in setupNib().
-
-        :returns: UIView instance loaded from a nib file.
-    */
-    public func loadNib() -> UIView {
-        let bundle = NSBundle(forClass: self.dynamicType)
-        let nib = UINib(nibName: self.nibName(), bundle: bundle)
-        return nib.instantiateWithOwner(self, options: nil)[0] as! UIView
+@IBDesignable
+public class NibDesignableTableViewCell: UITableViewCell {
+    
+    // MARK: - Initializer
+    override public init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        self.setupNib()
     }
-
+    
+    // MARK: - NSCoding
+    required public init(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        self.setupNib()
+    }
+    
+    // MARK: - Nib loading
+    
     /**
-        Called in the default implementation of loadNib(). Default is class name.
-
-        :returns: Name of a single view nib file.
+        Called in init(frame:) and init(aDecoder:) to load the nib and add it as a subview.
     */
-    public func nibName() -> String {
-        return self.dynamicType.description().componentsSeparatedByString(".").last!
+    private func setupNib() {
+        let view = self.loadNib()
+        self.contentView.addSubview(view)
+        view.setTranslatesAutoresizingMaskIntoConstraints(false)
+        let bindings = ["view": view]
+        self.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|[view]|", options:NSLayoutFormatOptions(0), metrics:nil, views: bindings))
+        self.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|[view]|", options:NSLayoutFormatOptions(0), metrics:nil, views: bindings))
     }
 }
