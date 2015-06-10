@@ -47,6 +47,10 @@ Nib Designable is released under an MIT license. See LICENSE for more informatio
 
 ## Release Notes
 
+Version 1.1.1
+
+- Fixed minor issue with `UITableViewCell`
+
 Version 1.1.0
 
 - Added support for `UITableViewCell`s, thanks to @duemunk
