@@ -13,7 +13,7 @@ Nib Designable
   ``` swift
   @IBDesignable
   class CustomView: NibDesignable {
-  
+
   }
   ```
 
@@ -26,7 +26,7 @@ Simply drop `NibDesignable.swift` into your project and it is ready to use.
 1. Create a new class that subclass' `NibDesignable` like
   ``` swift
   class CustomView: NibDesignable {
-  
+
   }
   ```
 2. Create a nib, place a `UIView` and change the `File's Owner` to `CustomView`
@@ -46,6 +46,14 @@ Follow me on Twitter ([@mbogh](https://twitter.com/mbogh)) and/or visit my blog 
 Nib Designable is released under an MIT license. See LICENSE for more information.
 
 ## Release Notes
+
+Version 1.1.1
+
+- Fixed minor issue with `UITableViewCell`
+
+Version 1.1.0
+
+- Added support for `UITableViewCell`s, thanks to @duemunk
 
 Version 1.0.4
 

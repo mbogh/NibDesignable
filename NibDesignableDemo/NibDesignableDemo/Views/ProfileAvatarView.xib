@@ -21,7 +21,7 @@
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="460" placeholderIntrinsicHeight="429" translatesAutoresizingMaskIntoConstraints="NO" id="PCT-rM-bLJ">
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="460" placeholderIntrinsicHeight="429" translatesAutoresizingMaskIntoConstraints="NO" id="PCT-rM-bLJ">
                     <rect key="frame" x="10" y="10" width="460" height="429"/>
                 </imageView>
             </subviews>
