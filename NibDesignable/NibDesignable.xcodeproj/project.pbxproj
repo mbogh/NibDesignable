@@ -161,6 +161,8 @@
 		AF6F74E01B0EFB690053DCBA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0630;
 				TargetAttributes = {
 					AF6F74E81B0EFB690053DCBA = {
@@ -404,6 +406,7 @@
 				AF6F75011B0EFB690053DCBA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AF6F75021B0EFB690053DCBA /* Build configuration list for PBXNativeTarget "NibDesignableTests" */ = {
 			isa = XCConfigurationList;
@@ -412,6 +415,7 @@
 				AF6F75041B0EFB690053DCBA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
