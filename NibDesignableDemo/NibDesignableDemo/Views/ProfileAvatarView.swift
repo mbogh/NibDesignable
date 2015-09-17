@@ -39,7 +39,7 @@ public class ProfileAvatarView: NibDesignable {
             let size = self.profileImage.size
             let rect = CGRectMake(0, 0, size.width, size.height)
             UIGraphicsBeginImageContextWithOptions(size, false, 0.0)
-            var path = UIBezierPath(ovalInRect: rect)
+            let path = UIBezierPath(ovalInRect: rect)
             path.addClip()
             self.profileImage.drawInRect(rect)
 
@@ -51,7 +51,7 @@ public class ProfileAvatarView: NibDesignable {
 
     // MARK: Interface Builder
     override public func prepareForInterfaceBuilder() {
-        if count(self.name) == 0 {
+        if self.name.characters.count == 0 {
             self.name = "John Appleseed"
         }
 

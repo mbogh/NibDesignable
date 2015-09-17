@@ -30,7 +30,7 @@ extension UIView {
     /**
     Called to load the nib in setupNib().
     
-    :returns: UIView instance loaded from a nib file.
+    - returns: UIView instance loaded from a nib file.
     */
     public func loadNib() -> UIView {
         let bundle = NSBundle(forClass: self.dynamicType)
@@ -41,7 +41,7 @@ extension UIView {
     /**
     Called in the default implementation of loadNib(). Default is class name.
     
-    :returns: Name of a single view nib file.
+    - returns: Name of a single view nib file.
     */
     public func nibName() -> String {
         return self.dynamicType.description().componentsSeparatedByString(".").last!
@@ -58,7 +58,7 @@ public class NibDesignable: UIView {
     }
 
     // MARK: - NSCoding
-    required public init(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self.setupNib()
     }
@@ -71,10 +71,10 @@ public class NibDesignable: UIView {
     private func setupNib() {
         let view = self.loadNib()
         self.addSubview(view)
-        view.setTranslatesAutoresizingMaskIntoConstraints(false)
+        view.translatesAutoresizingMaskIntoConstraints = false
         let bindings = ["view": view]
-        self.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|[view]|", options:NSLayoutFormatOptions(0), metrics:nil, views: bindings))
-        self.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|[view]|", options:NSLayoutFormatOptions(0), metrics:nil, views: bindings))
+        self.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|[view]|", options:NSLayoutFormatOptions(rawValue: 0), metrics:nil, views: bindings))
+        self.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|[view]|", options:NSLayoutFormatOptions(rawValue: 0), metrics:nil, views: bindings))
     }
 }
 
@@ -88,7 +88,7 @@ public class NibDesignableTableViewCell: UITableViewCell {
     }
     
     // MARK: - NSCoding
-    required public init(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self.setupNib()
     }
@@ -101,9 +101,9 @@ public class NibDesignableTableViewCell: UITableViewCell {
     private func setupNib() {
         let view = self.loadNib()
         self.contentView.addSubview(view)
-        view.setTranslatesAutoresizingMaskIntoConstraints(false)
+        view.translatesAutoresizingMaskIntoConstraints = false
         let bindings = ["view": view]
-        self.contentView.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|[view]|", options:NSLayoutFormatOptions(0), metrics:nil, views: bindings))
-        self.contentView.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|[view]|", options:NSLayoutFormatOptions(0), metrics:nil, views: bindings))
+        self.contentView.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|[view]|", options:NSLayoutFormatOptions(rawValue: 0), metrics:nil, views: bindings))
+        self.contentView.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|[view]|", options:NSLayoutFormatOptions(rawValue: 0), metrics:nil, views: bindings))
     }
 }
