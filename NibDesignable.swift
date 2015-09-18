@@ -137,3 +137,33 @@ public class NibDesignableControl: UIControl {
         self.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|[view]|", options:NSLayoutFormatOptions(rawValue: 0), metrics:nil, views: bindings))
     }
 }
+
+@IBDesignable
+public class NibDesignableCollectionViewCell: UICollectionViewCell {
+    
+    // MARK: - Initializer
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        self.setupNib()
+    }
+    
+    // MARK: - NSCoding
+    required public init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        self.setupNib()
+    }
+    
+    // MARK: - Nib loading
+    
+    /**
+    Called in init(frame:) and init(aDecoder:) to load the nib and add it as a subview.
+    */
+    private func setupNib() {
+        let view = self.loadNib()
+        self.contentView.addSubview(view)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        let bindings = ["view": view]
+        self.contentView.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|[view]|", options:NSLayoutFormatOptions(rawValue: 0), metrics:nil, views: bindings))
+        self.contentView.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|[view]|", options:NSLayoutFormatOptions(rawValue: 0), metrics:nil, views: bindings))
+    }
+}
