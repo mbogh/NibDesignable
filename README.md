@@ -49,6 +49,10 @@ Nib Designable is released under an MIT license. See LICENSE for more informatio
 
 Version 2.1.0
 
+- `UICollectionViewCell` support added by @pyankoff
+
+Version 2.1.0
+
 - `UIControl` support added by @illaz
 
 Version 2.0.0
