@@ -76,6 +76,10 @@ public class NibDesignable: UIView {
         self.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|[view]|", options:NSLayoutFormatOptions(rawValue: 0), metrics:nil, views: bindings))
         self.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|[view]|", options:NSLayoutFormatOptions(rawValue: 0), metrics:nil, views: bindings))
     }
+    
+    override public func willMoveToSuperview(newSuperview: UIView?) {
+        layoutIfNeeded()
+    }
 }
 
 @IBDesignable
