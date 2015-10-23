@@ -184,6 +184,8 @@
 		5AD66C33198C06A70006A638 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0600;
 				ORGANIZATIONNAME = "Morten Bøgh";
 				TargetAttributes = {
@@ -446,6 +448,7 @@
 				5AD7CA421A6152F5002E66A8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
