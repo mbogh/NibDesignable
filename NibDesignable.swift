@@ -24,6 +24,12 @@
 import UIKit
 
 public protocol NibDesignableProtocol: NSObjectProtocol {
+    /**
+     Identifies the view that will be the superview of the contents loaded from
+     the Nib. Referenced in setupNib().
+     
+     - returns: Superview for Nib contents. 
+     */
     var nibContainerView: UIView { get }
     // MARK: - Nib loading
 
