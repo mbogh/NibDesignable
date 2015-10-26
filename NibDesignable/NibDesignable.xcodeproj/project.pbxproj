@@ -8,28 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		AF6F74EF1B0EFB690053DCBA /* NibDesignable.h in Headers */ = {isa = PBXBuildFile; fileRef = AF6F74EE1B0EFB690053DCBA /* NibDesignable.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AF6F74F51B0EFB690053DCBA /* NibDesignable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF6F74E91B0EFB690053DCBA /* NibDesignable.framework */; };
-		AF6F74FC1B0EFB690053DCBA /* NibDesignableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6F74FB1B0EFB690053DCBA /* NibDesignableTests.swift */; };
 		AF6F75061B0EFB960053DCBA /* NibDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6F75051B0EFB960053DCBA /* NibDesignable.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		AF6F74F61B0EFB690053DCBA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AF6F74E01B0EFB690053DCBA /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = AF6F74E81B0EFB690053DCBA;
-			remoteInfo = NibDesignable;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		AF6F74E91B0EFB690053DCBA /* NibDesignable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NibDesignable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF6F74ED1B0EFB690053DCBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF6F74EE1B0EFB690053DCBA /* NibDesignable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NibDesignable.h; sourceTree = "<group>"; };
-		AF6F74F41B0EFB690053DCBA /* NibDesignableTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NibDesignableTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AF6F74FA1B0EFB690053DCBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AF6F74FB1B0EFB690053DCBA /* NibDesignableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibDesignableTests.swift; sourceTree = "<group>"; };
 		AF6F75051B0EFB960053DCBA /* NibDesignable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NibDesignable.swift; path = ../../NibDesignable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -41,14 +26,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AF6F74F11B0EFB690053DCBA /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AF6F74F51B0EFB690053DCBA /* NibDesignable.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -56,7 +33,6 @@
 			isa = PBXGroup;
 			children = (
 				AF6F74EB1B0EFB690053DCBA /* NibDesignable */,
-				AF6F74F81B0EFB690053DCBA /* NibDesignableTests */,
 				AF6F74EA1B0EFB690053DCBA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -65,7 +41,6 @@
 			isa = PBXGroup;
 			children = (
 				AF6F74E91B0EFB690053DCBA /* NibDesignable.framework */,
-				AF6F74F41B0EFB690053DCBA /* NibDesignableTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -84,23 +59,6 @@
 			isa = PBXGroup;
 			children = (
 				AF6F74ED1B0EFB690053DCBA /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		AF6F74F81B0EFB690053DCBA /* NibDesignableTests */ = {
-			isa = PBXGroup;
-			children = (
-				AF6F74FB1B0EFB690053DCBA /* NibDesignableTests.swift */,
-				AF6F74F91B0EFB690053DCBA /* Supporting Files */,
-			);
-			path = NibDesignableTests;
-			sourceTree = "<group>";
-		};
-		AF6F74F91B0EFB690053DCBA /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				AF6F74FA1B0EFB690053DCBA /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -137,24 +95,6 @@
 			productReference = AF6F74E91B0EFB690053DCBA /* NibDesignable.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		AF6F74F31B0EFB690053DCBA /* NibDesignableTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = AF6F75021B0EFB690053DCBA /* Build configuration list for PBXNativeTarget "NibDesignableTests" */;
-			buildPhases = (
-				AF6F74F01B0EFB690053DCBA /* Sources */,
-				AF6F74F11B0EFB690053DCBA /* Frameworks */,
-				AF6F74F21B0EFB690053DCBA /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				AF6F74F71B0EFB690053DCBA /* PBXTargetDependency */,
-			);
-			name = NibDesignableTests;
-			productName = NibDesignableTests;
-			productReference = AF6F74F41B0EFB690053DCBA /* NibDesignableTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -166,9 +106,6 @@
 				LastUpgradeCheck = 0630;
 				TargetAttributes = {
 					AF6F74E81B0EFB690053DCBA = {
-						CreatedOnToolsVersion = 6.3.2;
-					};
-					AF6F74F31B0EFB690053DCBA = {
 						CreatedOnToolsVersion = 6.3.2;
 					};
 				};
@@ -186,20 +123,12 @@
 			projectRoot = "";
 			targets = (
 				AF6F74E81B0EFB690053DCBA /* NibDesignable */,
-				AF6F74F31B0EFB690053DCBA /* NibDesignableTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		AF6F74E71B0EFB690053DCBA /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AF6F74F21B0EFB690053DCBA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -217,23 +146,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AF6F74F01B0EFB690053DCBA /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AF6F74FC1B0EFB690053DCBA /* NibDesignableTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		AF6F74F71B0EFB690053DCBA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = AF6F74E81B0EFB690053DCBA /* NibDesignable */;
-			targetProxy = AF6F74F61B0EFB690053DCBA /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		AF6F74FD1B0EFB690053DCBA /* Debug */ = {
@@ -357,36 +270,6 @@
 			};
 			name = Release;
 		};
-		AF6F75031B0EFB690053DCBA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = NibDesignableTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		AF6F75041B0EFB690053DCBA /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = NibDesignableTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -404,15 +287,6 @@
 			buildConfigurations = (
 				AF6F75001B0EFB690053DCBA /* Debug */,
 				AF6F75011B0EFB690053DCBA /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		AF6F75021B0EFB690053DCBA /* Build configuration list for PBXNativeTarget "NibDesignableTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				AF6F75031B0EFB690053DCBA /* Debug */,
-				AF6F75041B0EFB690053DCBA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
