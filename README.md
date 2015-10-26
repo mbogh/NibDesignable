@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/mbogh/NibDesignable.svg?branch=master)](https://travis-ci.org/mbogh/NibDesignable)
+[![Build Status](https://travis-ci.org/mbogh/NibDesignable.svg?branch=master)](https://travis-ci.org/mbogh/NibDesignable) [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
 Nib Designable
 =============
