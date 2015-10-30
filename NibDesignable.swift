@@ -73,7 +73,7 @@ extension NibDesignableProtocol {
         let bindings = ["view": view]
         self.nibContainerView.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|[view]|", options:NSLayoutFormatOptions(rawValue: 0), metrics:nil, views: bindings))
         self.nibContainerView.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|[view]|", options:NSLayoutFormatOptions(rawValue: 0), metrics:nil, views: bindings))
-        self.awakeFromNib()
+        self.nibContainerView.awakeFromNib()
     }
 }
 
