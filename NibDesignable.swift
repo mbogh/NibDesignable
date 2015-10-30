@@ -67,7 +67,7 @@ extension NibDesignableProtocol {
     Called in init(frame:) and init(aDecoder:) to load the nib and add it as a subview.
     */
     private func setupNib() {
-        self.backgroundColor = UIColor.clearColor()
+        self.nibContainerView.backgroundColor = UIColor.clearColor()
         let view = self.loadNib()
         self.nibContainerView.addSubview(view)
         view.translatesAutoresizingMaskIntoConstraints = false
