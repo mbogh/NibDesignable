@@ -8,19 +8,12 @@ Nib Designable
 ## Installation
 
 ### CocoaPods
+Add `pod 'NibDesignable'` to your `Podfile`
 
-1. Add `pod 'NibDesignable'` to your `Podfile`
-2. Add `import NibDesignable`
-3. Sometimes Xcode/Interface Builder does not recognize `NibDesignable` as `@IBDesignable`. **Workaround** Declare your custom class as `@IBDesignable` like:
-  ``` swift
-  @IBDesignable
-  class CustomView: NibDesignable {
-
-  }
-  ```
+### Carthage
+Add `github "mbogh/NibDesignable"` to your `Cartfile`.
 
 ### Manual
-
 Simply drop `NibDesignable.swift` into your project and it is ready to use.
 
 ## Usage
@@ -33,6 +26,13 @@ Simply drop `NibDesignable.swift` into your project and it is ready to use.
   ```
 2. Create a nib, place a `UIView` and change the `File's Owner` to `CustomView`
 3. Design your view and add `@IBInspectable` properties.
+4. Sometimes Xcode/Interface Builder does not recognize `NibDesignable` as `@IBDesignable`. **Workaround** Declare your custom class as `@IBDesignable` like:
+  ``` swift
+  @IBDesignable
+  class CustomView: NibDesignable {
+
+  }
+  ```
 
 ## Thanks
 
