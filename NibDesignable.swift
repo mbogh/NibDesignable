@@ -71,16 +71,14 @@ extension NibDesignableProtocol {
         self.nibContainerView.addSubview(view)
         view.translatesAutoresizingMaskIntoConstraints = false
         let bindings = ["view": view]
-        self.nibContainerView.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|[view]|", options:NSLayoutFormatOptions(rawValue: 0), metrics:nil, views: bindings))
-        self.nibContainerView.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|[view]|", options:NSLayoutFormatOptions(rawValue: 0), metrics:nil, views: bindings))
+        self.nibContainerView.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|[view]|", options:[], metrics:nil, views: bindings))
+        self.nibContainerView.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|[view]|", options:[], metrics:nil, views: bindings))
     }
 }
 
 extension UIView {
     public var nibContainerView: UIView {
-        get {
-            return self
-        }
+        return self
     }
     /**
      Called in the default implementation of loadNib(). Default is class name.
@@ -111,9 +109,7 @@ public class NibDesignable: UIView, NibDesignableProtocol {
 @IBDesignable
 public class NibDesignableTableViewCell: UITableViewCell, NibDesignableProtocol {
     public override var nibContainerView: UIView {
-        get {
-            return self.contentView
-        }
+        return self.contentView
     }
 
     // MARK: - Initializer
@@ -146,11 +142,25 @@ public class NibDesignableControl: UIControl, NibDesignableProtocol {
 }
 
 @IBDesignable
+public class NibDesignableCollectionReusableView: UICollectionReusableView, NibDesignableProtocol {
+
+    // MARK: - Initializer
+    override public init(frame: CGRect) {
+        super.init(frame: frame)
+        self.setupNib()
+    }
+
+    // MARK: - NSCoding
+    required public init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        self.setupNib()
+    }
+}
+
+@IBDesignable
 public class NibDesignableCollectionViewCell: UICollectionViewCell, NibDesignableProtocol {
     public override var nibContainerView: UIView {
-        get {
-            return self.contentView
-        }
+        return self.contentView
     }
 
     // MARK: - Initializer
