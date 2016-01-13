@@ -142,6 +142,22 @@ public class NibDesignableControl: UIControl, NibDesignableProtocol {
 }
 
 @IBDesignable
+public class NibDesignableCollectionReusableView: UICollectionReusableView, NibDesignableProtocol {
+
+    // MARK: - Initializer
+    override public init(frame: CGRect) {
+        super.init(frame: frame)
+        self.setupNib()
+    }
+
+    // MARK: - NSCoding
+    required public init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        self.setupNib()
+    }
+}
+
+@IBDesignable
 public class NibDesignableCollectionViewCell: UICollectionViewCell, NibDesignableProtocol {
     public override var nibContainerView: UIView {
         return self.contentView
