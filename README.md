@@ -50,6 +50,10 @@ Nib Designable is released under an MIT license. See LICENSE for more informatio
 
 ## Release Notes
 
+Version 2.3.0
+
+- `UICollectionReusableView` support added by @ikesyo
+
 Version 2.2.0
 
 - `UICollectionViewCell` support added by @pyankoff
