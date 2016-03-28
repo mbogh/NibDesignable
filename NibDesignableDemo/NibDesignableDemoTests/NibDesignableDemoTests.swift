@@ -30,11 +30,11 @@ class NibDesignableDemoTests: XCTestCase {
     override func setUp() {
         super.setUp()
     }
-    
+
     override func tearDown() {
         super.tearDown()
     }
-    
+
     func testNibNameMatchingClassName() {
         let view = ProfileAvatarView(frame: CGRect())
         XCTAssertEqual("ProfileAvatarView", view.nibName(), "nibName should return the class name when not overridden")

@@ -27,17 +27,17 @@ public protocol NibDesignableProtocol: NSObjectProtocol {
     /**
      Identifies the view that will be the superview of the contents loaded from
      the Nib. Referenced in setupNib().
-     
-     - returns: Superview for Nib contents. 
+
+     - returns: Superview for Nib contents.
      */
     var nibContainerView: UIView { get }
     // MARK: - Nib loading
 
     /**
-    Called to load the nib in setupNib().
+     Called to load the nib in setupNib().
 
-    - returns: UIView instance loaded from a nib file.
-    */
+     - returns: UIView instance loaded from a nib file.
+     */
     func loadNib() -> UIView
     /**
      Called in the default implementation of loadNib(). Default is class name.
@@ -51,21 +51,21 @@ extension NibDesignableProtocol {
     // MARK: - Nib loading
 
     /**
-    Called to load the nib in setupNib().
+     Called to load the nib in setupNib().
 
-    - returns: UIView instance loaded from a nib file.
-    */
+     - returns: UIView instance loaded from a nib file.
+     */
     public func loadNib() -> UIView {
         let bundle = NSBundle(forClass: self.dynamicType)
         let nib = UINib(nibName: self.nibName(), bundle: bundle)
-        return nib.instantiateWithOwner(self, options: nil)[0] as! UIView
+        return nib.instantiateWithOwner(self, options: nil)[0] as! UIView // swiftlint:disable:this force_cast
     }
 
     // MARK: - Nib loading
 
     /**
-    Called in init(frame:) and init(aDecoder:) to load the nib and add it as a subview.
-    */
+     Called in init(frame:) and init(aDecoder:) to load the nib and add it as a subview.
+     */
     private func setupNib() {
         let view = self.loadNib()
         self.nibContainerView.addSubview(view)
