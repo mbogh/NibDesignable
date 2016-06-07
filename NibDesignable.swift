@@ -68,11 +68,21 @@ extension NibDesignableProtocol {
      */
     private func setupNib() {
         let view = self.loadNib()
-        self.nibContainerView.addSubview(view)
-        view.translatesAutoresizingMaskIntoConstraints = false
-        let bindings = ["view": view]
-        self.nibContainerView.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|[view]|", options:[], metrics:nil, views: bindings))
-        self.nibContainerView.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|[view]|", options:[], metrics:nil, views: bindings))
+        let nibView = self.nibContainerView
+        let constraints = view.constraints.map { (constraint) -> NSLayoutConstraint in
+          if view == constraint.firstItem as? UIView {
+            constraint.setValue(nibView, forKey: "firstItem")
+          }
+          if view == constraint.secondItem as? UIView {
+            constraint.setValue(nibView, forKey: "secondItem")
+          }
+          return constraint
+        }
+        
+        view.subviews.forEach { nibView.addSubview($0) }
+        nibView.translatesAutoresizingMaskIntoConstraints = false
+        nibView.addConstraints(constraints)
+        nibView.awakeFromNib()
     }
 }
 
