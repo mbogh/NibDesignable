@@ -82,6 +82,7 @@ extension NibDesignableProtocol {
         view.subviews.forEach { nibView.addSubview($0) }
         nibView.translatesAutoresizingMaskIntoConstraints = false
         nibView.addConstraints(constraints)
+        nibView.setValuesForKeysWithDictionary(view.dictionaryWithValuesForKeys(["tag", "clipsToBounds", "backgroundColor", "userInteractionEnabled", "hidden"]))
         nibView.awakeFromNib()
     }
 }
