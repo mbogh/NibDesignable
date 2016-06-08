@@ -164,6 +164,10 @@ public class NibDesignableTableViewHeaderFooterView: UITableViewHeaderFooterView
 			return self.contentView
 	}
 	
+	private func setupNib() {
+		setupNibWithViewInjection()
+	}
+	
 	// MARK: - Initializer
 	override public init(reuseIdentifier: String?) {
 		super.init(reuseIdentifier: reuseIdentifier)
