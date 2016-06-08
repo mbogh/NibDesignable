@@ -126,6 +126,26 @@ public class NibDesignableTableViewCell: UITableViewCell, NibDesignableProtocol 
 }
 
 @IBDesignable
+public class NibDesignableTableViewHeaderFooterView: UITableViewHeaderFooterView, NibDesignableProtocol {
+	
+	public override var nibContainerView: UIView {
+			return self.contentView
+	}
+	
+	// MARK: - Initializer
+	override public init(reuseIdentifier: String?) {
+		super.init(reuseIdentifier: reuseIdentifier)
+		self.setupNib()
+	}
+	
+	// MARK: - NSCoding
+	required public init?(coder aDecoder: NSCoder) {
+		super.init(coder: aDecoder)
+		self.setupNib()
+	}
+}
+
+@IBDesignable
 public class NibDesignableControl: UIControl, NibDesignableProtocol {
 
     // MARK: - Initializer
