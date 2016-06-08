@@ -67,6 +67,24 @@ extension NibDesignableProtocol {
      Called in init(frame:) and init(aDecoder:) to load the nib and add it as a subview.
      */
     private func setupNib() {
+        #if TARGET_INTERFACE_BUILDER
+          setupNibWithViewInjection()
+        #else
+          setupNibWithViewReplication()
+        #endif
+        self.nibContainerView.awakeFromNib()
+      }
+      
+      private func setupNibWithViewInjection() {
+        let view = self.loadNib()
+        self.nibContainerView.addSubview(view)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        let bindings = ["view": view]
+        self.nibContainerView.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|[view]|", options:[], metrics:nil, views: bindings))
+        self.nibContainerView.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|[view]|", options:[], metrics:nil, views: bindings))
+      }
+      
+      private func setupNibWithViewReplication() {
         let view = self.loadNib()
         let nibView = self.nibContainerView
         let constraints = view.constraints.map { (constraint) -> NSLayoutConstraint in
@@ -83,8 +101,7 @@ extension NibDesignableProtocol {
         nibView.translatesAutoresizingMaskIntoConstraints = false
         nibView.addConstraints(constraints)
         nibView.setValuesForKeysWithDictionary(view.dictionaryWithValuesForKeys(["tag", "clipsToBounds", "backgroundColor", "userInteractionEnabled", "hidden"]))
-        nibView.awakeFromNib()
-    }
+      }
 }
 
 extension UIView {
@@ -122,6 +139,10 @@ public class NibDesignableTableViewCell: UITableViewCell, NibDesignableProtocol 
     public override var nibContainerView: UIView {
         return self.contentView
     }
+    
+    func setupNib() {
+        setupNibWithViewInjection()
+      }
 
     // MARK: - Initializer
     override public init(style: UITableViewCellStyle, reuseIdentifier: String?) {
@@ -173,6 +194,10 @@ public class NibDesignableCollectionViewCell: UICollectionViewCell, NibDesignabl
     public override var nibContainerView: UIView {
         return self.contentView
     }
+    
+    func setupNib() {
+        setupNibWithViewInjection()
+      }
 
     // MARK: - Initializer
     override public init(frame: CGRect) {
