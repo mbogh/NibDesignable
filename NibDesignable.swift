@@ -74,7 +74,7 @@ extension NibDesignableProtocol {
         #endif
         self.nibContainerView.awakeFromNib()
       }
-      
+
       private func setupNibWithViewInjection() {
         let view = self.loadNib()
         self.nibContainerView.addSubview(view)
@@ -83,7 +83,7 @@ extension NibDesignableProtocol {
         self.nibContainerView.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|[view]|", options:[], metrics:nil, views: bindings))
         self.nibContainerView.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|[view]|", options:[], metrics:nil, views: bindings))
       }
-      
+
       private func setupNibWithViewReplication() {
         let view = self.loadNib()
         let nibView = self.nibContainerView
@@ -96,7 +96,7 @@ extension NibDesignableProtocol {
           }
           return constraint
         }
-        
+
         view.subviews.forEach { nibView.addSubview($0) }
         nibView.translatesAutoresizingMaskIntoConstraints = false
         nibView.addConstraints(constraints)
@@ -139,7 +139,7 @@ public class NibDesignableTableViewCell: UITableViewCell, NibDesignableProtocol 
     public override var nibContainerView: UIView {
         return self.contentView
     }
-    
+
     func setupNib() {
         setupNibWithViewInjection()
       }
@@ -163,11 +163,11 @@ public class NibDesignableTableViewHeaderFooterView: UITableViewHeaderFooterView
 	public override var nibContainerView: UIView {
 			return self.contentView
 	}
-	
+
 	private func setupNib() {
 		setupNibWithViewInjection()
 	}
-	
+
 	// MARK: - Initializer
 	override public init(reuseIdentifier: String?) {
 		super.init(reuseIdentifier: reuseIdentifier)
@@ -218,10 +218,10 @@ public class NibDesignableCollectionViewCell: UICollectionViewCell, NibDesignabl
     public override var nibContainerView: UIView {
         return self.contentView
     }
-    
+
     func setupNib() {
         setupNibWithViewInjection()
-      }
+		}
 
     // MARK: - Initializer
     override public init(frame: CGRect) {
