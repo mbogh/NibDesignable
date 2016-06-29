@@ -39,9 +39,9 @@ public class ProfileAvatarView: NibDesignable {
             let size = self.profileImage.size
             let rect = CGRect(x: 0, y: 0, width: size.width, height: size.height)
             UIGraphicsBeginImageContextWithOptions(size, false, 0.0)
-            let path = UIBezierPath(ovalInRect: rect)
+            let path = UIBezierPath(ovalIn: rect)
             path.addClip()
-            self.profileImage.drawInRect(rect)
+            self.profileImage.draw(in: rect)
 
             let image = UIGraphicsGetImageFromCurrentImageContext()
             UIGraphicsEndImageContext()
@@ -56,8 +56,8 @@ public class ProfileAvatarView: NibDesignable {
         }
 
         if self.profileImage.size == CGSize.zero {
-            let bundle = NSBundle(forClass: self.dynamicType)
-            self.profileImage = UIImage(named: "Donkey", inBundle: bundle, compatibleWithTraitCollection: nil)!
+            let bundle = Bundle(for: self.dynamicType)
+            self.profileImage = UIImage(named: "Donkey", in: bundle, compatibleWith: nil)!
         }
     }
 }
