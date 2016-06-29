@@ -56,9 +56,9 @@ extension NibDesignableProtocol {
      - returns: UIView instance loaded from a nib file.
      */
     public func loadNib() -> UIView {
-        let bundle = NSBundle(forClass: self.dynamicType)
+        let bundle = Bundle(for: self.dynamicType)
         let nib = UINib(nibName: self.nibName(), bundle: bundle)
-        return nib.instantiateWithOwner(self, options: nil)[0] as! UIView // swiftlint:disable:this force_cast
+        return nib.instantiate(withOwner: self, options: nil)[0] as! UIView // swiftlint:disable:this force_cast
     }
 
     // MARK: - Nib loading
@@ -71,8 +71,8 @@ extension NibDesignableProtocol {
         self.nibContainerView.addSubview(view)
         view.translatesAutoresizingMaskIntoConstraints = false
         let bindings = ["view": view]
-        self.nibContainerView.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|[view]|", options:[], metrics:nil, views: bindings))
-        self.nibContainerView.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|[view]|", options:[], metrics:nil, views: bindings))
+        self.nibContainerView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[view]|", options:[], metrics:nil, views: bindings))
+        self.nibContainerView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[view]|", options:[], metrics:nil, views: bindings))
     }
 }
 
@@ -86,7 +86,7 @@ extension UIView {
      - returns: Name of a single view nib file.
      */
     public func nibName() -> String {
-        return self.dynamicType.description().componentsSeparatedByString(".").last!
+        return self.dynamicType.description().components(separatedBy: ".").last!
     }
 }
 
