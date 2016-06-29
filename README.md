@@ -50,6 +50,10 @@ Nib Designable is released under an MIT license. See LICENSE for more informatio
 
 ## Release Notes
 
+Version 2.4.0
+
+- `UITableViewHeaderFooterView` support added by @farzadshbfn
+
 Version 2.3.0
 
 - `UICollectionReusableView` support added by @ikesyo
