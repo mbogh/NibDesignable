@@ -1,0 +1,16 @@
+PODS:
+  - NibDesignable (2.3.0)
+
+DEPENDENCIES:
+  - NibDesignable (from `../`)
+
+EXTERNAL SOURCES:
+  NibDesignable:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  NibDesignable: 10eb4480cab249bb5d5ba273061b026df824087b
+
+PODFILE CHECKSUM: c78bbfa6656908397a5de9dc9a72d026a7a0c167
+
+COCOAPODS: 1.1.0.beta.1
