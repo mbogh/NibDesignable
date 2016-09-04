@@ -23,7 +23,7 @@
 //  SOFTWARE.
 
 import UIKit
-import NibDesignableDemo
+import NibDesignable
 
 class TestView: NibDesignable {
     override func nibName() -> String {
