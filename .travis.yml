@@ -6,5 +6,5 @@ script:
   - swiftlint lint --strict
 before_install:
   - brew update
-  - brew install swiftlint
+  - brew outdated swiftlint || brew upgrade swiftlint
   - gem install xcpretty xcpretty-travis-formatter
