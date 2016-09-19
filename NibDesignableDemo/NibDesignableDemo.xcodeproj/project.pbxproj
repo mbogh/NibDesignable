@@ -485,7 +485,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9E018F9A02475634BEE014D6 /* Pods-NibDesignableDemo.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				INFOPLIST_FILE = NibDesignableDemo/Info.plist;
@@ -500,7 +500,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4881CA706BC8C011722BFDEE /* Pods-NibDesignableDemo.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				INFOPLIST_FILE = NibDesignableDemo/Info.plist;

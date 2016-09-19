@@ -1,6 +1,6 @@
 {
   "name": "NibDesignable",
-  "version": "2.3.0",
+  "version": "3.0.0",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/mbogh/NibDesignable.git",
-    "tag": "2.3.0"
+    "tag": "3.0.0"
   },
   "requires_arc": true,
   "platforms": {
