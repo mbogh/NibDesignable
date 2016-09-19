@@ -18,9 +18,7 @@
 		5AD7CA451A615D44002E66A8 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD7CA441A615D44002E66A8 /* TestView.swift */; };
 		5AD7CA471A615D9D002E66A8 /* TestingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AD7CA461A615D9D002E66A8 /* TestingView.xib */; };
 		9D9B00F3C514B25066D8C149 /* Pods_NibDesignableDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4444582F67ECB8D5782B62E9 /* Pods_NibDesignableDemoTests.framework */; };
-		AA105FEA1D7A2E36007D88D5 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AA105FE91D7A2E36007D88D5 /* Info.plist */; };
 		AA5212311D7A2BF7007C76CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA5212301D7A2BF7007C76CE /* LaunchScreen.storyboard */; };
-		AA5212511D7A2CA9007C76CE /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AA5212501D7A2CA9007C76CE /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -243,7 +241,6 @@
 				5AD66C68198CC0740006A638 /* ProfileAvatarView.xib in Resources */,
 				5AD66C46198C06A70006A638 /* Main.storyboard in Resources */,
 				AA5212311D7A2BF7007C76CE /* LaunchScreen.storyboard in Resources */,
-				AA5212511D7A2CA9007C76CE /* Info.plist in Resources */,
 				5AD66C48198C06A70006A638 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -252,7 +249,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA105FEA1D7A2E36007D88D5 /* Info.plist in Resources */,
 				5AD7CA471A615D9D002E66A8 /* TestingView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -485,7 +481,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9E018F9A02475634BEE014D6 /* Pods-NibDesignableDemo.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				INFOPLIST_FILE = NibDesignableDemo/Info.plist;
@@ -500,7 +496,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4881CA706BC8C011722BFDEE /* Pods-NibDesignableDemo.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				INFOPLIST_FILE = NibDesignableDemo/Info.plist;
