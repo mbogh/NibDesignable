@@ -24,14 +24,6 @@
 import UIKit
 
 public protocol NibDesignableProtocol: NSObjectProtocol {
-    /**
-     Identifies the view that will be the superview of the contents loaded from
-     the Nib. Referenced in setupNib().
-
-     - returns: Superview for Nib contents.
-     */
-    var nibContainerView: UIView { get }
-    // MARK: - Nib loading
 
     /**
      Called to load the nib in setupNib().
@@ -65,21 +57,21 @@ extension NibDesignableProtocol {
 
     /**
      Called in init(frame:) and init(aDecoder:) to load the nib and add it as a subview.
+
+     - parameter container: a view that will become the superview of the contents loaded from the Nib
      */
-    fileprivate func setupNib() {
+    fileprivate func setupNib(in container: UIView) {
         let view = self.loadNib()
-        self.nibContainerView.addSubview(view)
+        container.addSubview(view)
         view.translatesAutoresizingMaskIntoConstraints = false
         let bindings = ["view": view]
-        self.nibContainerView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[view]|", options:[], metrics:nil, views: bindings))
-        self.nibContainerView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[view]|", options:[], metrics:nil, views: bindings))
+        container.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[view]|", options:[], metrics:nil, views: bindings))
+        container.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[view]|", options:[], metrics:nil, views: bindings))
     }
 }
 
 extension UIView {
-    public var nibContainerView: UIView {
-        return self
-    }
+
     /**
      Called in the default implementation of loadNib(). Default is class name.
 
@@ -96,52 +88,45 @@ open class NibDesignable: UIView, NibDesignableProtocol {
     // MARK: - Initializer
     override public init(frame: CGRect) {
         super.init(frame: frame)
-        self.setupNib()
+        self.setupNib(in: self)
     }
 
     // MARK: - NSCoding
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        self.setupNib()
+        self.setupNib(in: self)
     }
 }
 
 @IBDesignable
 open class NibDesignableTableViewCell: UITableViewCell, NibDesignableProtocol {
-    public override var nibContainerView: UIView {
-        return self.contentView
-    }
 
     // MARK: - Initializer
     override public init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        self.setupNib()
+        self.setupNib(in: self.contentView)
     }
 
     // MARK: - NSCoding
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        self.setupNib()
+        self.setupNib(in: self.contentView)
     }
 }
 
 @IBDesignable
 open class NibDesignableTableViewHeaderFooterView: UITableViewHeaderFooterView, NibDesignableProtocol {
 
-	public override var nibContainerView: UIView {
-			return self.contentView
-	}
-
 	// MARK: - Initializer
 	override public init(reuseIdentifier: String?) {
 		super.init(reuseIdentifier: reuseIdentifier)
-		self.setupNib()
+		self.setupNib(in: self)
 	}
 
 	// MARK: - NSCoding
 	required public init?(coder aDecoder: NSCoder) {
 		super.init(coder: aDecoder)
-		self.setupNib()
+        self.setupNib(in: self)
 	}
 }
 
@@ -151,13 +136,13 @@ open class NibDesignableControl: UIControl, NibDesignableProtocol {
     // MARK: - Initializer
     override public init(frame: CGRect) {
         super.init(frame: frame)
-        self.setupNib()
+        self.setupNib(in: self)
     }
 
     // MARK: - NSCoding
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        self.setupNib()
+        self.setupNib(in: self)
     }
 }
 
@@ -167,31 +152,28 @@ open class NibDesignableCollectionReusableView: UICollectionReusableView, NibDes
     // MARK: - Initializer
     override public init(frame: CGRect) {
         super.init(frame: frame)
-        self.setupNib()
+        self.setupNib(in: self)
     }
 
     // MARK: - NSCoding
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        self.setupNib()
+        self.setupNib(in: self)
     }
 }
 
 @IBDesignable
 open class NibDesignableCollectionViewCell: UICollectionViewCell, NibDesignableProtocol {
-    public override var nibContainerView: UIView {
-        return self.contentView
-    }
 
     // MARK: - Initializer
     override public init(frame: CGRect) {
         super.init(frame: frame)
-        self.setupNib()
+        self.setupNib(in: self.contentView)
     }
 
     // MARK: - NSCoding
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        self.setupNib()
+        self.setupNib(in: self.contentView)
     }
 }
