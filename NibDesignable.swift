@@ -77,7 +77,7 @@ extension NibDesignableProtocol {
 }
 
 extension UIView {
-    public var nibContainerView: UIView {
+    @objc public var nibContainerView: UIView {
         return self
     }
     /**
@@ -113,7 +113,7 @@ open class NibDesignableTableViewCell: UITableViewCell, NibDesignableProtocol {
     }
 
     // MARK: - Initializer
-    override public init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    override public init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         self.setupNib()
     }
