@@ -9,7 +9,8 @@ let package = Package(
     targets: [
         .target(
             name: "NibDesignable",
-            path: "NibDesignable.swift"
+            path: ".",
+            exclude: ["NibDesignable", "NibDesignableDemo"]
         )
     ]
 )
