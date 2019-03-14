@@ -7,15 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		828035ED223AB00600A5AA21 /* NibDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828035EC223AB00500A5AA21 /* NibDesignable.swift */; };
 		AF6F74EF1B0EFB690053DCBA /* NibDesignable.h in Headers */ = {isa = PBXBuildFile; fileRef = AF6F74EE1B0EFB690053DCBA /* NibDesignable.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AF6F75061B0EFB960053DCBA /* NibDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6F75051B0EFB960053DCBA /* NibDesignable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		828035EC223AB00500A5AA21 /* NibDesignable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NibDesignable.swift; path = ../../Sources/NibDesignable.swift; sourceTree = "<group>"; };
 		AF6F74E91B0EFB690053DCBA /* NibDesignable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NibDesignable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF6F74ED1B0EFB690053DCBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF6F74EE1B0EFB690053DCBA /* NibDesignable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NibDesignable.h; sourceTree = "<group>"; };
-		AF6F75051B0EFB960053DCBA /* NibDesignable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NibDesignable.swift; path = ../../NibDesignable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,7 +48,7 @@
 		AF6F74EB1B0EFB690053DCBA /* NibDesignable */ = {
 			isa = PBXGroup;
 			children = (
-				AF6F75051B0EFB960053DCBA /* NibDesignable.swift */,
+				828035EC223AB00500A5AA21 /* NibDesignable.swift */,
 				AF6F74EE1B0EFB690053DCBA /* NibDesignable.h */,
 				AF6F74EC1B0EFB690053DCBA /* Supporting Files */,
 			);
@@ -107,7 +107,7 @@
 				TargetAttributes = {
 					AF6F74E81B0EFB690053DCBA = {
 						CreatedOnToolsVersion = 6.3.2;
-						LastSwiftMigration = 1000;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -143,7 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF6F75061B0EFB960053DCBA /* NibDesignable.swift in Sources */,
+				828035ED223AB00600A5AA21 /* NibDesignable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,6 +266,7 @@
 		AF6F75001B0EFB690053DCBA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -277,6 +278,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.justabeech.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
@@ -284,6 +286,7 @@
 		AF6F75011B0EFB690053DCBA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
