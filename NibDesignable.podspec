@@ -11,5 +11,5 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'NibDesignable.swift'
+  s.source_files = 'Sources/NibDesignable.swift'
 end
