@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'NibDesignable'
-  s.version = '3.0.0'
+  s.version = '4.0.0'
   s.license = { :type => 'MIT', :file => 'LICENSE' }
   s.summary = 'Elegant way of enabling IBDesignable on your nib-based views'
   s.homepage = 'https://github.com/mbogh/NibDesignable'
@@ -10,6 +10,7 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.ios.deployment_target = '8.0'
+  s.swift_version = '5.0'
 
   s.source_files = 'NibDesignable.swift'
 end

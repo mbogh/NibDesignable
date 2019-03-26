@@ -58,6 +58,10 @@ Nib Designable is released under an MIT license. See LICENSE for more informatio
 
 ## Release Notes
 
+Version 4.0.0
+
+- Swift 5.0 support, by @peterringset
+
 Version 3.0.0
 
 - Swift 3.0 support, thanks to @sstadelman and @esetnik
