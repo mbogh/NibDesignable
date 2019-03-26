@@ -10,6 +10,7 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.ios.deployment_target = '8.0'
+  s.swift_version = '5.0'
 
   s.source_files = 'NibDesignable.swift'
 end
